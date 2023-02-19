@@ -1002,6 +1002,8 @@ hr {
     display: block;
     max-width: 100%;
     height: auto;
+    position: relative;
+    /* transition: transform .7s linear;  */
 }
 
 .blog__date {
@@ -1025,7 +1027,13 @@ hr {
     background-color: #f38181;
 }
 
+.blog__item:hover .blog__text{
+    color: #000
+}
 
+/* .blog__item:hover .blog__photo{
+    transform: scale(1.2);
+} */
 
 .blog__date-day {
     font-size: 30px;
@@ -1058,6 +1066,7 @@ hr {
 .blog__text {
     font-size: 15px;
     color: #999;
+    transition: color .2s linear;
 }
 
 .blog__footer {
