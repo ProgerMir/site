@@ -1031,6 +1031,10 @@ hr {
     color: #000
 }
 
+.blog__item:hover .blog-stat__item i{
+    color: #54bfab;
+}
+
 /* .blog__item:hover .blog__photo{
     transform: scale(1.2);
 } */
@@ -1088,6 +1092,8 @@ hr {
 .blog-stat__item i {
     color: #95e1d3;
 }
+
+
 
 
 /* Map */
