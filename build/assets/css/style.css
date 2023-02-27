@@ -299,7 +299,7 @@ hr {
 }
 
 .btn:hover {
-    background-color: #6e69c7;
+    background-color: #65bce7;
 }
 
 .scroll-to-block{
@@ -315,7 +315,7 @@ hr {
     height: 100%;
     fill: transparent;
     stroke-width: 7;
-    stroke: #6e69c7;
+    stroke: #65bce7;
     stroke-dasharray: 100;
     animation: animate 5s linear infinite;
     transition: 1s;
