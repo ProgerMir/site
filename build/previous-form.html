@@ -1,0 +1,63 @@
+<form action="https://formspree.io/f/meqwpknp" id="form" class="form__body" method="post">
+    <!-- <form action="./mail.php" id="form" class="form__body"></form> -->
+    <h1 class="form__title">
+        You can send us your message
+    </h1>
+
+    <div class="form__item">
+        <label for="formName" class="form__label">
+            *Name
+        </label>
+        <input id="formName" type="text" name="name" class="form__input _required" placeholder="Please enter your name" required>
+    </div>
+
+    <div class="form__item">
+        <label for="formEmail" class="form__label">
+        *E-mail
+        </label>
+        <input id="formEmail" type="text" name="email" class="form__input _required" placeholder="Your e-mail" required>
+    </div>
+
+    <div class="form__item">
+        <label for="formMessage" class="form__label">*Type your text here</label>
+        <textarea class="form__textarea _required" name="message" id="formMessage" placeholder="Your message" required></textarea>
+    </div>
+    
+    <h3 class="form__title">
+        Two options for searching employees (not necessary)
+    </h3>
+    
+    <div class="form__item">
+        <div class="form__label">How many employees do you find?</div>
+        <div class="options">
+            <div class="options__item">
+                <input id="formOneEmployee" type="radio" name="quantity" class="options__input" value="one">
+                <label for="formOneEmployee" class="options__label"><span>One</span></label>
+            </div>
+            <div class="options__item">
+                <input id="formMoreEmployees" type="radio" name="quantity" class="options__input" value="two">
+                <label for="formMoreEmployees" class="options__label"><span>Two and more</span></label>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="form__item">
+        <div class="form__label">Degree (click on the list)</div>
+        <select name="degree" class="select">
+            <option disabled selected value></option>
+            <option value="primaryschool">Primary school</option>
+            <option value="highschool">High school</option>
+            <option value="university">University</option>
+        </select>
+    </div>
+
+    <div class="form__item">
+        <div class="checkbox">
+            <input id="formMessageSend" type="checkbox" name="agreement" class="checkbox__input _required" checked required>
+            <label for="formMessageSend" class="form__label"><span>I hereby agree to the Terms of processing of my personal data</span></label>
+        </div>
+    </div>
+
+    <button type="submit" class="form__button">Send</button>
+</form>
