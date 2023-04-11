@@ -665,69 +665,52 @@
     <section class="section__message" id="contact__form">
             <div class="form" id="form">
                 <div class="container">
-                <form action="#!" id="form" class="form__body">
-                    <!-- <form action="./mail.php" id="form" class="form__body"></form> -->
                     <h1 class="form__title">
                         You can send us your message
                     </h1>
+                    <form id="fs-frm" name="basic-rsvp-form" accept-charset="utf-8" action="https://formspree.io/f/meqwpknp" method="post">
+                        <fieldset id="fs-frm-inputs">
+                          <label for="full-name">Your Name</label>
+                          <input type="text" name="name" id="full-name" placeholder="Please enter your name" required="">
 
-                    <div class="form__item">
-                        <label for="formName" class="form__label">
-                            *Name
-                        </label>
-                        <input id="formName" type="text" name="name" class="form__input _required" placeholder="Please enter your name" required>
-                    </div>
+                          <label for="email-address">Email Address</label>
+                          <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
 
-                    <div class="form__item">
-                        <label for="formEmail" class="form__label">
-                        *E-mail
-                        </label>
-                        <input id="formEmail" type="text" name="email" class="form__input _required" placeholder="Your e-mail" required>
-                    </div>
+                          <label for="message">Message</label>
+    <textarea rows="5" name="message" id="message" placeholder="Your message" required=""></textarea>
 
-                    <div class="form__item">
-                        <label for="formMessage" class="form__label">*Type your text here</label>
-                        <textarea class="form__textarea _required" name="message" id="formMessage" placeholder="Your message" required></textarea>
-                    </div>
-                    
-                    <h3 class="form__title">
-                        Two options for searching employees (not necessary)
-                    </h3>
-                    
-                    <div class="form__item">
-                        <div class="form__label">How many employees do you find?</div>
-                        <div class="options">
-                            <div class="options__item">
-                                <input id="formOneEmployee" type="radio" name="quantity" class="options__input" value="one">
-                                <label for="formOneEmployee" class="options__label"><span>One</span></label>
-                            </div>
-                            <div class="options__item">
-                                <input id="formMoreEmployees" type="radio" name="quantity" class="options__input" value="two">
-                                <label for="formMoreEmployees" class="options__label"><span>Two and more</span></label>
+    <h3 class="form__title">
+        Two options for searching employees (not necessary)
+    </h3>
+
+    <div class="form__item">
+        <div class="form__label"><label for="degree">Degree (click on the list)</label></div>
+        <select name="degree" class="select">
+            <option disabled selected value></option>
+            <option value="primaryschool">Primary school</option>
+            <option value="highschool">High school</option>
+            <option value="university">University</option>
+        </select>
+    </div>
+                          <label for="plus">How many employees do you find?</label>
+                          <select name="plus" id="plus">
+                              <option disabled selected value></option>
+                              <option value="1">1</option>
+                              <option value="2">2 and more</option>
+                          </select>
+                          <input type="hidden" name="_subject" id="email-subject" value="RSVP">
+                        </fieldset>
+
+                        <div class="form__item">
+                            <div class="checkbox">
+                                <input id="formMessageSend" type="checkbox" name="agreement" class="checkbox__input _required" checked required>
+                                <label for="formMessageSend" class="form__label"><span>I hereby agree to the Terms of processing of my personal data</span></label>
                             </div>
                         </div>
-                    </div>
 
-                    
-                    <div class="form__item">
-                        <div class="form__label">Degree (click on the list)</div>
-                        <select name="degree" class="select">
-                            <option disabled selected value></option>
-                            <option value="primaryschool">Primary school</option>
-                            <option value="highschool">High school</option>
-                            <option value="university">University</option>
-                        </select>
-                    </div>
+                        <input type="submit" value="Send">
+                      </form>
 
-                    <div class="form__item">
-                        <div class="checkbox">
-                            <input id="formMessageSend" type="checkbox" name="agreement" class="checkbox__input _required" checked required>
-                            <label for="formMessageSend" class="form__label"><span>I hereby agree to the Terms of processing of my personal data</span></label>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="form__button">Send</button>
-                </form>
             </div>
 
         </div>
