@@ -106,10 +106,31 @@ $(function() {
 
 // Form
 
-const form = document.querySelector('form')
-form.addEventListener('submit', function(e) {
+const secondForm = document.querySelector('#secondForm')
+secondForm.addEventListener('submit', function(e) {
   e.preventDefault()
 })
+
+// document.addEventListener('DOMContentLoaded', function(){
+//     const form = document.getElementById('form')
+//     form.addEventListener('submit', formSend)
+
+//     async function formSend(e){
+//         e.preventDefault()
+
+//         let error = formValidate(form)
+//     }
+
+//     function formValidate(form){
+//         let error = 0
+//         let formRequired = document.querySelectorAll('._required')
+//     }
+
+// })
+
+
+
+
 
 
 
@@ -122,5 +143,6 @@ socialLinks.forEach((socialLink) => socialLink.addEventListener('click', (e) => 
 
 const socialItems = document.querySelectorAll('.social__item')
 socialItems.forEach((socialItem) => socialItem.addEventListener('click', (e) => e.preventDefault()))
+
 
 

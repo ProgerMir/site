@@ -386,7 +386,7 @@ hr {
 
 /* Section */
 .section {
-    padding: 30px 0;
+    padding: 5px 0;
 }
 
 .section--devices {
@@ -1386,6 +1386,150 @@ hr {
 
 
 
+/* FORM */
+
+.form{
+    background-color: #f8f8f8;
+    padding: 15px 0;
+}
+
+.form__title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+}
+
+.form__item{
+    margin: 0 0 20px 0;
+}
+
+.form__input{
+    height: 30px;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+
+.form__input, .form__textarea{
+    width: 100%;
+    font-size: 16px;
+}
+
+.form__textarea{
+    min-height: 70px;
+    resize: vertical;
+    padding: 7px 20px;
+}
+
+.form__button{
+    display: flex;
+    width: 200px;
+
+    font-weight: 700;
+
+    justify-content: center;
+    align-items: center;
+    min-height: 30px;
+
+    background-color: #0f2f3f;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+
+    transition: background-color .1s linear;
+}
+
+.form__button:hover{
+    background-color: #16465f;
+}
+
+
+.section__message h3{
+    font-size: 15px;
+}
+
+
+.options {
+    margin-top: 10px;
+}
+
+.options__input{
+    display: none;
+}
+
+.options__input:checked + .options__label::after{
+    transform: scale(1);
+}
+
+.options__item{
+    margin: 0 0 5px 0;
+}
+
+.options__label{
+    display: inline-flex;
+    font-size: 13px;
+    line-height: 140%;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.options__label::before{
+    content: "";
+    flex: 0 0 20px;
+    height: 20px;
+    background-color: #9a9898;
+    border-radius: 50%;
+
+    align-self: flex-start;
+
+    margin: 0 10px 0 0;
+}
+
+.options__label::after{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background-color: #0f2f3f;
+    border-radius: 50%;
+
+    transform: scale(0);
+
+    transition: transform .1s linear;
+}
+
+.file__input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.file__button{
+    display: inline-flex;
+    background-color: #0f2f3f;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 50px;
+    padding: 5px 15px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* MEDIA */
+
 
 @media (max-width: 1230px) {
 
@@ -1576,6 +1720,7 @@ hr {
     .section--devices {
         padding-bottom: 0;
     }
+
 
 
     /* Card */
