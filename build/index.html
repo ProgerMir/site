@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- Swiper -->
+<link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+
     <title>Employees for you</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicons/favicon-32x32.png">
@@ -23,7 +27,7 @@
 <header class="header" id="header">
     <div class="container">
         <div class="header__inner">
-            <div class="header__logo" data-scroll="#intro"><a href="#!" alt="logo">EfY</a></div>
+            <div class="header__logo" data-scroll="#intro"><a href="#" alt="logo">EfY</a></div>
 
             <nav class="nav" id="nav">
                 <div class="nav__header-logo" data-scroll="#intro"><a href="/" alt="logo">EfY</a></div>
@@ -32,7 +36,7 @@
                 <a class="nav__link scroll-to-block" href="#!" data-scroll="#works">Work</a>
                 <a class="nav__link scroll-to-block" href="#!" data-scroll="#blog">Blog</a>
                 
-                <a class="nav__link scroll-to-block" href="#!" data-scroll="#contact__form">Contact us</a>
+                <a class="nav__link scroll-to-block" href="#!" data-scroll="#map">Contact us</a>
                 <!-- <a class="nav__link" href="#!">
                     <i class="fas fa-shopping-cart"></i>
                 </a> -->
@@ -77,45 +81,93 @@
                     <p>We can find workers for you and you will see their competence. It will help you to make a write decision in a short time.</p>
                 </div>
             </div>
+            
 
-            <div class="card">
-                <div class="card__item">
-                    <div class="card__inner">
-                        <div class="card__img">
-                            <picture>
-                                <source srcset="assets/images/about/1.avif">
+            <!-- carousel -->
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="carousel-wrapper swiper-wrapper">
+                        
+                        <!-- Slide Item -->
+                        <div class="carousel swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="carousel-image">
+                                    <picture>
+                                        <source srcset="assets/images/about/1.avif">
+                                    
+                                    <img src="assets/images/about/1.jpg" alt="service" class="carousel-img">
+                                </picture>
+                                    
+                                </div>
+                            </div>
+    
+                            <div class="carousel-content">
+
+                                <h2 class="name">super team</h2>
+                          
+                                <button class="button"><a href="#!" class="scroll-to-block" data-scroll="#scroll-to-team">Read More</a></button>
+
                             
-                            <img src="assets/images/about/1.jpg" alt="service">
-                        </picture>
+                                
+                            </div>
                         </div>
-                        <div class="card__text">super team</div>
-                    </div>
-                </div>
+                        <!-- / Slide Item -->
 
-                <div class="card__item">
-                    <div class="card__inner">
-                        <div class="card__img">
-                            <picture>
-                                <source srcset="assets/images/about/2.avif">
-                            <img src="assets/images/about/2.jpg" alt="second service">
-                            </picture>
+                        <!-- Slide Item -->
+                        <div class="carousel swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="carousel-image">
+                                    <picture>
+                                        <source srcset="assets/images/about/2.avif">
+                                    <img src="assets/images/about/2.jpg" alt="second service" class="carousel-img">
+                                    </picture>
+                                </div>
+                            </div>
+    
+                            <div class="carousel-content">
+                                <h2 class="name">Super offers</h2>
+                          
+                                <button class="button"><a href="#!" class="scroll-to-block" data-scroll="#offers">
+                                    Read More</a></button>
+                            </div>
                         </div>
-                        <div class="card__text">super offers</div>
-                    </div>
-                </div>
+                        <!-- / Slide Item -->
 
-                <div class="card__item">
-                    <div class="card__inner">
-                        <div class="card__img">
-                            <picture>
-                                <source srcset="assets/images/about/3.avif">
-                            <img src="assets/images/about/3.jpg" alt="third service">
-                        </picture>
+                        <!-- Slide Item -->
+                        <div class="carousel swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="carousel-image">
+                                    <picture>
+                                        <source srcset="assets/images/about/3.avif">
+                                    <img src="assets/images/about/3.jpg" alt="third service" class="carousel-img">
+                                </picture>
+                                </div>
+                            </div>
+    
+                            <div class="carousel-content">
+                                <h2 class="name">Super result</h2>
+                          
+                                <button class="button"><a href="#!" class="scroll-to-block" data-scroll="#results">
+                                    Read More</a></button>
+                            </div>
                         </div>
-                        <div class="card__text">super result</div>
+                        <!-- / Slide Item -->
+
                     </div>
                 </div>
+    
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
             </div>
+            <!--/ Second carousel -->
+
 
         </div><!-- /.container -->
     </section>
@@ -182,9 +234,9 @@
     <section class="section">
         <div class="container">
 
-            <div class="section__header">
+            <div class="section__header" id="offers">
                 <h3 class="section__suptitle">Service</h3>
-                <h2 class="section__title">what we do</h2>
+                <h2 class="section__title">Our offers</h2>
                 <div class="section__text">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
@@ -236,7 +288,7 @@
     </section>
 
 
-    <!-- Reviews 1 -->
+    <!-- Reviews 1
     <div class="section  section--gray">
         <div class="container">
 
@@ -261,14 +313,14 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
 
     <!-- Team -->
     <section class="section">
         <div class="container">
 
-            <div class="section__header">
+            <div class="section__header" id="scroll-to-team">
                 <h3 class="section__suptitle">Who we are</h3>
                 <h2 class="section__title">Meet our team</h2>
                 <div class="section__text">
@@ -450,10 +502,11 @@
     <div class="container">
 
         <div class="section__header">
+            <h3 class="section__suptitle">Clients</h3>
             <h2 class="section__title">Our clients</h2>
         </div>
         
-        <div data-black class="logos">
+        <div class="logos">
             <div class="logos__item">
                 <img class="logos__img" src="assets/images/logos/1.png" alt="">
             </div>
@@ -479,10 +532,11 @@
 
   
     <!-- Clients -->
-    <section class="section  section--clients">
+    <section class="section section--clients" id="results">
         <div class="container">
 
             <div class="section__header">
+                <h3 class="section__suptitle">Results</h3>
                 <h2 class="section__title">Reviews from clients</h2>
             </div>
 
@@ -649,9 +703,9 @@
 
 
     <!-- Map -->
-    <section class="section  section--map">
+    <section class="section section--map">
         <div class="container">
-            <div class="map">
+            <div class="map" id="map">
                 <h2 class="map__title">
                     <div><i class="fas fa-map-marker-alt"></i></div>
                     <a href="https://goo.gl/maps/F8YpeCGqwrG2" target="_blank">Open Map</a>
@@ -670,13 +724,13 @@
                     </h1>
                     <form id="fs-frm" name="basic-rsvp-form" accept-charset="utf-8" action="https://formspree.io/f/meqwpknp" method="post">
                         <fieldset id="fs-frm-inputs">
-                          <label for="full-name">Your Name</label>
+                          <label for="full-name">* Your Name</label>
                           <input type="text" name="name" id="full-name" placeholder="Please enter your name" required="">
 
-                          <label for="email-address">Email Address</label>
+                          <label for="email-address">* Email Address</label>
                           <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
 
-                          <label for="message">Message</label>
+                          <label for="message">* Message</label>
     <textarea rows="5" name="message" id="message" placeholder="Your message" required=""></textarea>
 
     <h3 class="form__title">
@@ -821,8 +875,13 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<!-- Swiper -->
+<script src="./assets/js/swiper-bundle.min.js"></script>
+
+<!-- main js -->
 <script src="assets/js/app.js"></script>
 
 
