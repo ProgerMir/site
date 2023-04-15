@@ -34,31 +34,19 @@ $(function() {
         }, 1000)
     })
 
-    // $(document).ready(function() {
-    //     $("a.scrollto").click(function () {
-    //       elementClick = $(this).attr("href")
-    //       destination = $(elementClick).offset().top;
-    //       $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 70}, 1100);
-    // return false;
-    //     });
-    //   });
 
-    // $("[data-scroll]").on("click", function(event) {
-    //     event.preventDefault();
+    $("[data-scroll]").on("click", function(event) {
+        event.preventDefault();
 
-    //     let $this = $(this),
-    //         blockId = $this.data('scroll'),
-    //         blockOffset = $(blockId).offset().top;
-
-    //     $("#nav a").removeClass("active");
-    //     $this.addClass("active");
-
-    //     $("html, body").animate({
-    //         scrollTop:  blockOffset
-    //     }, 700);
-    // });
+        var $this = $(this),
+            blockId = $this.data('scroll'),
+            blockOffset = $(blockId).offset().top - 70;
 
 
+        $("html, body").animate({
+            scrollTop:  blockOffset
+        }, 500);
+    });
 
     /* Menu nav toggle */
     $("#nav_toggle").on("click", function(event) {
@@ -83,23 +71,6 @@ $(function() {
         $this.toggleClass("active");
     });
 
-
-    /* Slider */
-    $("[data-slider]").slick({
-        infinite: true,
-        fade: false,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    });
-
-
-    $("[data-black]").slick({
-        infinite: true,
-        fade: false,
-        slidesToShow: 5,
-        slidesToScroll: 1
-    });
-
 });
 
 
@@ -110,28 +81,6 @@ const secondForm = document.querySelector('#secondForm')
 secondForm.addEventListener('submit', function(e) {
   e.preventDefault()
 })
-
-// document.addEventListener('DOMContentLoaded', function(){
-//     const form = document.getElementById('form')
-//     form.addEventListener('submit', formSend)
-
-//     async function formSend(e){
-//         e.preventDefault()
-
-//         let error = formValidate(form)
-//     }
-
-//     function formValidate(form){
-//         let error = 0
-//         let formRequired = document.querySelectorAll('._required')
-//     }
-
-// })
-
-
-
-
-
 
 
 // A href socials
@@ -146,3 +95,34 @@ socialItems.forEach((socialItem) => socialItem.addEventListener('click', (e) => 
 
 
 
+// Swiper
+
+var swiper = new Swiper(".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor: 'true',
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints:{
+        0: {
+            slidesPerView: 1,
+        },
+        520: {
+            slidesPerView: 2,
+        },
+        950: {
+            slidesPerView: 3,
+        },
+    },
+  });

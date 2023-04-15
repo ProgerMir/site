@@ -283,7 +283,7 @@ hr {
 }
 
 
-/* Button */
+/* Button header */
 .btn {
     display: inline-block;
     vertical-align: top;
@@ -425,6 +425,7 @@ hr {
     font-family: 'Kaushan Script', cursive;
     font-size: 24px;
     color: #333;
+    margin-top: 20px;
 }
 
 .section__title {
@@ -451,17 +452,15 @@ hr {
 
 
 
+
+
 /* Card */
 .card {
     margin: 30px -15px 0;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
-}
-
-.card__item {
-    width: 33.33333%;
-    padding: 0 15px;
 }
 
 .card__inner {
@@ -481,6 +480,10 @@ hr {
     opacity: 1;
 }
 
+.card__inner:hover .card__text-read {
+    opacity: 1;
+}
+
 .card__img {
     background: linear-gradient(to bottom, #e17979, #e0c66b);
 
@@ -494,7 +497,7 @@ hr {
     transition: opacity .1s linear;
 }
 
-.card__text {
+.card__text, .card__text-read {
     width: 100%;
 
     font-size: 18px;
@@ -502,6 +505,7 @@ hr {
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
+
     opacity: 0;
 
     position: absolute;
@@ -511,6 +515,23 @@ hr {
     transform: translate3d(0, -50%, 0);
 
     transition: opacity .2s linear;
+}
+
+.card__text-read{
+    font-size: 12px;
+    padding: 5px 5px;
+    border: 1px solid #fff;
+
+    background-color: #0f2f3f;
+
+    border-radius: 30px;
+    width: 30%;
+    text-align: center;
+    transition: background .1s linear;
+}
+
+.card__text-read:hover{
+    background-color: #1b4b62;
 }
 
 .card__info {
@@ -533,6 +554,117 @@ hr {
     font-weight: 300;
     color: #999;
 }
+
+/* SWIPER */
+  
+ 
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+  }
+  .slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+  .carousel{
+    border-radius: 25px;
+    background-color: #FFF;
+  }
+  .image-content,
+  .carousel-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+  }
+  .image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+  }
+  .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0f2f3f;
+    border-radius: 25px;
+  }
+  .carousel-image{
+    position: relative;
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+  }
+  .carousel-image .carousel-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070F4;
+  }
+  .name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    text-transform: uppercase;
+  }
+  .description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+  }
+  .button{
+    border: none;
+    font-size: 16px;
+    
+    padding: 8px 16px;
+    background-color: #0f2f3f;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .button a {
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  .button:hover{
+    background: #184257;
+  }
+  
+  .swiper-navBtn{
+    color: #0f2f3f;
+    transition: color 0.3s ease;
+  }
+  .swiper-navBtn:hover{
+    color: #f38181;
+  }
+  .swiper-navBtn::before,
+  .swiper-navBtn::after{
+    font-size: 35px;
+  }
+  .swiper-button-next{
+    right: 0;
+  }
+  .swiper-button-prev{
+    left: 0;
+  }
+  .swiper-pagination-bullet{
+    background-color: #6E93f7;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: #4070F4;
+  }
+  
 
 
 
@@ -865,9 +997,10 @@ hr {
 /* Logos */
 .logos {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    margin: 0 -15px;
+    margin: 0 auto;
 }
 
 .logos__item {
@@ -879,7 +1012,7 @@ hr {
     display: block;
     max-width: 100%;
     height: auto;
-    padding: 0 50px;
+    padding: 0 10px;
 }
 
 
@@ -1154,6 +1287,112 @@ hr {
 }
 
 
+/* form from sites */
+
+.checkbox {
+    display: flex;
+}
+      #fs-frm input, #fs-frm select, #fs-frm textarea,#fs-frm fieldset, #fs-frm optgroup, #fs-frm label,#fs-frm #card-element:disabled {
+                        font-family: inherit;
+                        font-size: 100%;
+                        color: inherit;
+                        border: none;
+                        border-radius: 0;
+                        display: block;
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                      }
+                      #fs-frm label,
+                      #fs-frm legend,
+                      #fs-frm ::placeholder {
+                        font-size: .825rem;
+                        margin-bottom: .5rem;
+                        padding-top: .2rem;
+                        display: flex;
+                        align-items: baseline;
+                      }
+                      
+                      /* border, padding, margin, width */
+                      #fs-frm input,
+                      #fs-frm select,
+                      #fs-frm textarea,
+                      #fs-frm #card-element {
+                        border: 1px solid rgba(0,0,0,0.2);
+                        background-color: rgba(255,255,255,0.9);
+                        padding: .75em 1rem;
+                        margin-bottom: 1.5rem;
+                      }
+                      #fs-frm input:focus,
+                      #fs-frm select:focus,
+                      #fs-frm textarea:focus {
+                        background-color: white;
+                        outline-style: solid;
+                        outline-width: thin;
+                        outline-color: gray;
+                        outline-offset: -1px;
+                      }
+                      #fs-frm [type="text"],
+                      #fs-frm [type="email"] {
+                        width: 100%;
+                      }
+                      #fs-frm [type="button"],
+                      #fs-frm [type="submit"],
+                      #fs-frm [type="reset"] {
+                        width: auto;
+                        cursor: pointer;
+                        -webkit-appearance: button;
+                        -moz-appearance: button;
+                        appearance: button;
+                      }
+                      #fs-frm [type="button"]:focus,
+                      #fs-frm [type="submit"]:focus,
+                      #fs-frm [type="reset"]:focus {
+                        outline: none;
+                      }
+                      #fs-frm [type="submit"],
+                      #fs-frm [type="reset"] {
+                        margin-bottom: 0;
+                      }
+                      #fs-frm select {
+                        text-transform: none;
+                      }
+                      
+                      #fs-frm [type="checkbox"] {
+                        -webkit-appearance: checkbox;
+                        -moz-appearance: checkbox;
+                        appearance: checkbox;
+                        display: inline-block;
+                        width: auto;
+                        margin: 0 .5em 5px 0 !important;
+                      }
+                      
+                      #fs-frm [type="radio"] {
+                        -webkit-appearance: radio;
+                        -moz-appearance: radio;
+                        appearance: radio;
+                      }
+                      
+                      /* address, locale */
+                      #fs-frm fieldset.locale input[name="city"],
+                      #fs-frm fieldset.locale select[name="state"],
+                      #fs-frm fieldset.locale input[name="postal-code"] {
+                        display: inline;
+                      }
+                      #fs-frm fieldset.locale input[name="city"] {
+                        width: 52%;
+                      }
+                      #fs-frm fieldset.locale select[name="state"],
+                      #fs-frm fieldset.locale input[name="postal-code"] {
+                        width: 20%;
+                      }
+                      #fs-frm fieldset.locale input[name="city"],
+                      #fs-frm fieldset.locale select[name="state"] {
+                        margin-right: 3%;
+                      }
+        
 
 /* Footer */
 .footer {
@@ -1444,6 +1683,10 @@ hr {
     background-color: #16465f;
 }
 
+textarea{
+    resize: vertical;
+}
+
 
 .section__message h3{
     font-size: 15px;
@@ -1636,6 +1879,11 @@ hr {
         width: auto;
         border-right: 1px solid white;
     }
+
+    .logos{
+       gap: 20px
+    }
+
 }
 
 @media (max-width: 770px) {
@@ -1731,13 +1979,14 @@ hr {
 
     .card__item {
         width: 100%;
-        max-width: 410px;
+        max-width: 380px;
         margin-bottom: 30px;
     }
 
     .card__item:last-child {
         margin-bottom: 0;
     }
+
 
 
     /* Slider */
@@ -1824,7 +2073,31 @@ hr {
     .footer__col--third {
         width: 100%;
     }
+
+    /* SWIPER */
+
+    .swiper-navBtn {
+        display: none!important;
+    }
+
+    .slide-content{
+        margin: 0 10px;
+      }
 }
+
+@media (max-width: 720px){
+    .logos{
+        margin: 0 30px;
+    }
+}
+
+@media (max-width: 640px){
+    .logos{
+        margin: 0 80px;
+    }
+}
+
+
 
 
 @media (max-width: 575px) {
@@ -1896,13 +2169,12 @@ hr {
     .logos {
         flex-wrap: wrap;
         justify-content: center;
-        padding: 0px 110px;
+        padding: 0px 5px;
     }
 
 
     .logos__item {
-        width: 50%;
-        margin-bottom: 20px;
+        width: 10%;
     }
 
     .logos__img {
@@ -1960,117 +2232,28 @@ hr {
 }
 
 
+@media (max-width: 575px){
+    .logos {
+        margin: 0 10px;
+    }
+    
+    .logos__item{
+        width: 40%
+    }
 
-/* form from sites */
+    .works__image{
+        margin: 0 auto;
+    }
 
-.checkbox {
-    display: flex;
+    .works__item{
+        background: none;
+    }
 }
 
-                      #fs-frm input,
-                      #fs-frm select,
-                      #fs-frm textarea,
-                      #fs-frm fieldset,
-                      #fs-frm optgroup,
-                      #fs-frm label,
-                      #fs-frm #card-element:disabled {
-                        font-family: inherit;
-                        font-size: 100%;
-                        color: inherit;
-                        border: none;
-                        border-radius: 0;
-                        display: block;
-                        width: 100%;
-                        padding: 0;
-                        margin: 0;
-                        -webkit-appearance: none;
-                        -moz-appearance: none;
-                      }
-                      #fs-frm label,
-                      #fs-frm legend,
-                      #fs-frm ::placeholder {
-                        font-size: .825rem;
-                        margin-bottom: .5rem;
-                        padding-top: .2rem;
-                        display: flex;
-                        align-items: baseline;
-                      }
-                      
-                      /* border, padding, margin, width */
-                      #fs-frm input,
-                      #fs-frm select,
-                      #fs-frm textarea,
-                      #fs-frm #card-element {
-                        border: 1px solid rgba(0,0,0,0.2);
-                        background-color: rgba(255,255,255,0.9);
-                        padding: .75em 1rem;
-                        margin-bottom: 1.5rem;
-                      }
-                      #fs-frm input:focus,
-                      #fs-frm select:focus,
-                      #fs-frm textarea:focus {
-                        background-color: white;
-                        outline-style: solid;
-                        outline-width: thin;
-                        outline-color: gray;
-                        outline-offset: -1px;
-                      }
-                      #fs-frm [type="text"],
-                      #fs-frm [type="email"] {
-                        width: 100%;
-                      }
-                      #fs-frm [type="button"],
-                      #fs-frm [type="submit"],
-                      #fs-frm [type="reset"] {
-                        width: auto;
-                        cursor: pointer;
-                        -webkit-appearance: button;
-                        -moz-appearance: button;
-                        appearance: button;
-                      }
-                      #fs-frm [type="button"]:focus,
-                      #fs-frm [type="submit"]:focus,
-                      #fs-frm [type="reset"]:focus {
-                        outline: none;
-                      }
-                      #fs-frm [type="submit"],
-                      #fs-frm [type="reset"] {
-                        margin-bottom: 0;
-                      }
-                      #fs-frm select {
-                        text-transform: none;
-                      }
-                      
-                      #fs-frm [type="checkbox"] {
-                        -webkit-appearance: checkbox;
-                        -moz-appearance: checkbox;
-                        appearance: checkbox;
-                        display: inline-block;
-                        width: auto;
-                        margin: 0 .5em 5px 0 !important;
-                      }
-                      
-                      #fs-frm [type="radio"] {
-                        -webkit-appearance: radio;
-                        -moz-appearance: radio;
-                        appearance: radio;
-                      }
-                      
-                      /* address, locale */
-                      #fs-frm fieldset.locale input[name="city"],
-                      #fs-frm fieldset.locale select[name="state"],
-                      #fs-frm fieldset.locale input[name="postal-code"] {
-                        display: inline;
-                      }
-                      #fs-frm fieldset.locale input[name="city"] {
-                        width: 52%;
-                      }
-                      #fs-frm fieldset.locale select[name="state"],
-                      #fs-frm fieldset.locale input[name="postal-code"] {
-                        width: 20%;
-                      }
-                      #fs-frm fieldset.locale input[name="city"],
-                      #fs-frm fieldset.locale select[name="state"] {
-                        margin-right: 3%;
-                      }
-        
+@media (max-width: 400px){
+    .logos__item{
+        width: 100%
+    }
+}
+
+
