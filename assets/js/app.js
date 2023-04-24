@@ -62,14 +62,14 @@ $(function() {
 
 
     /* Collapse */
-    $("[data-collapse]").on("click", function(event) {
-        event.preventDefault();
+    // $("[data-collapse]").on("click", function(event) {
+    //     event.preventDefault();
 
-        let $this = $(this),
-            blockId = $this.data('collapse');
+    //     let $this = $(this),
+    //         blockId = $this.data('collapse');
 
-        $this.toggleClass("active");
-    });
+    //     $this.toggleClass("active");
+    // });
 
 });
 
@@ -126,3 +126,42 @@ var swiper = new Swiper(".slide-content", {
         },
     },
   });
+
+
+//   TYPES OF OFFERS Tabs
+
+const tabsOfOffers = document.querySelectorAll('.accordion__item')
+const tabsContent =  document.querySelectorAll('.accordion__content')
+
+tabsOfOffers.forEach(function(item){
+    item.addEventListener('click', function(){
+        let currentBtn = item
+        let tabId = currentBtn.getAttribute('data-collapse')
+        let currentTab = document.querySelector(tabId)
+        console.log(currentTab);
+
+        tabsOfOffers.forEach(function(item){
+            item.classList.remove('active')
+        })
+
+        tabsContent.forEach(function(item){
+            item.classList.remove('active')
+        })
+
+
+        currentBtn.classList.add('active')
+        currentTab.classList.add('active')
+
+        if(currentBtn.classList.contains('active')){
+            currentTab.classList.toggle('hidden')
+        }
+
+        // if(currentTab.classList.contains = 'active'){
+        //     currentTab.classList.toggle('active')
+        // }
+    })
+})
+  
+document.querySelector('.accordion__item').click()
+
+//   / TYPES OF OFFERS Tabs
