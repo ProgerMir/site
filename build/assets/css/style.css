@@ -458,7 +458,6 @@ hr {
 .card {
     margin: 30px -15px 0;
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
 }
@@ -788,24 +787,7 @@ hr {
 
 
 .accordion__item {
-    margin-bottom: 10px;
     border: 1px solid #e5e5e5;
-    
-}
-
-.accordion__item.active .accordion__content {
-    display: block;
-    
-}
-
-.accordion__item.active .accordion__header {
-    border-bottom-color: #e5e5e5;
-    
-}
-
-.accordion__item.active .accordion__header:after {
-    transform: translateY(-50%) rotate(-45deg);
-    margin-top: 5px;
     
 }
 
@@ -817,7 +799,7 @@ hr {
     cursor: pointer;
     
 }
-
+/* 
 .accordion__header:after {
     content: "";
     display: block;
@@ -835,7 +817,7 @@ hr {
     transform: translateY(-50%) rotate(135deg);
 
     transition: transform ease .7s;
-}
+} */
 
 .accordion__icon {
     position: absolute;
@@ -851,11 +833,25 @@ hr {
     padding: 15px 20px;
     display: none;
 
+    border: 1px solid #e5e5e5;
+
     font-size: 15px;
     color: #999;
     font-style: italic;
     font-weight: 300;
-    transition: all ease 1s;
+    
+    margin-bottom: 15px;
+
+    animation: contentShow .7s linear forwards;
+}
+
+@keyframes contentShow{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .accordion__title {
@@ -864,6 +860,13 @@ hr {
     text-transform: uppercase;
 }
 
+.active{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
 
 
 /* Reviews */
@@ -1888,6 +1891,10 @@ textarea{
 }
 
 @media (max-width: 770px) {
+
+    .card{
+        flex-wrap: wrap;
+    }
 
     /* Intro */
     .intro {
