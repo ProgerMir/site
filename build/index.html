@@ -766,6 +766,9 @@
                         <input type="submit" value="Send">
                       </form>
 
+                       
+                      </div>
+
             </div>
 
         </div>
@@ -857,9 +860,13 @@
                     </div>
 
                     <form class="subscribe" id="secondForm" action="/" method="post">
+                      
+
                         <input class="subscribe__input" type="email" name="name" placeholder="Your Email...">
-                        <button class="subscribe__btn" type="submit">Subscribe</button>
+                        <button class="subscribe__btn" type="button" data-modal-button="form-modal">Subscribe</button>
                     </form>
+
+                   
 
                 </div>
 
@@ -875,8 +882,32 @@
 </div><!-- /.page -->
 
 
+ <!-- Modal -->
+ <div id="form-modal" data-modal class="fade-block hidden">
+  <div class="modal-window">
+      <div class="modal-card">
+          <div class="modal-card__header">
+              Modal window
+          </div>
+          <div class="modal-card-body">
+              <p>
+                 Your e-mail was sent! We will write you in the near future.
+              </p>
+              <button
+                  data-modal-close
+                  type="button"
+                  class="btn btn-dark"
+              >
+                  Close
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Modal / -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 
 <!-- Swiper -->

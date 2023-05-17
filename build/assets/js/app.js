@@ -75,12 +75,12 @@ $(function() {
 
 
 
-// Form
+// Form email
 
-const secondForm = document.querySelector('#secondForm')
-secondForm.addEventListener('submit', function(e) {
-  e.preventDefault()
-})
+// const secondForm = document.querySelector('#secondForm')
+// secondForm.addEventListener('submit', function(e) {
+//   e.preventDefault()
+// })
 
 
 // A href socials
@@ -155,13 +155,42 @@ tabsOfOffers.forEach(function(item){
         if(currentBtn.classList.contains('active')){
             currentTab.classList.toggle('hidden')
         }
-
-        // if(currentTab.classList.contains = 'active'){
-        //     currentTab.classList.toggle('active')
-        // }
     })
 })
   
 document.querySelector('.accordion__item').click()
 
 //   / TYPES OF OFFERS Tabs
+
+
+
+// Modals
+const modalButtons = document.querySelectorAll('[data-modal-button]')
+const modalCloseButtons = document.querySelectorAll('[data-modal-close]')
+const allModals = document.querySelectorAll('[data-modal]')
+
+modalButtons.forEach(function(item){
+  item.addEventListener('click', function(){
+    const modalId = this.dataset.modalButton
+    const modal = document.querySelector('#'+modalId)
+    modal.classList.remove('hidden')
+
+    modal.querySelector('.modal-window').addEventListener('click', function(event){
+      event.stopPropagation()
+
+    })
+  })
+})
+
+modalCloseButtons.forEach(function(item){
+  item.addEventListener('click', function(){
+    const modal = this.closest('[data-modal]')
+    modal.classList.add('hidden')
+  })
+})
+
+allModals.forEach(function(item){
+  item.addEventListener('click', function(){
+    this.classList.add('hidden')
+  })
+})
