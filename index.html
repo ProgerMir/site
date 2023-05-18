@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CMontserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- Swiper -->
@@ -27,10 +27,10 @@
 <header class="header" id="header">
     <div class="container">
         <div class="header__inner">
-            <div class="header__logo" data-scroll="#intro"><a href="#" alt="logo">EfY</a></div>
+            <div class="header__logo" data-scroll="#intro"><a href="#" title="logo">EfY</a></div>
 
             <nav class="nav" id="nav">
-                <div class="nav__header-logo" data-scroll="#intro"><a href="/" alt="logo">EfY</a></div>
+                <div class="nav__header-logo" data-scroll="#intro"><a href="/" title="logo">EfY</a></div>
                 <a class="nav__link scroll-to-block" href="#!" data-scroll="#about">About us</a>
                 <a class="nav__link scroll-to-block" href="#!" data-scroll="#services">Service</a>
                 <a class="nav__link scroll-to-block" href="#!" data-scroll="#works">Work</a>
@@ -62,7 +62,7 @@
                 <h1 class="intro__title">Find workers</h1>
 
                 <a class="btn scroll-to-block" href="#!" data-scroll="#about">
-                    <svg><rect></rect></svg>Read More
+                    <svg><rect width="20" height="20"></rect></svg>Read More
                     </a>
             </div>
         </div>
@@ -107,7 +107,10 @@
 
                                 <h2 class="name">super team</h2>
                           
-                                <button class="button"><a href="#!" class="scroll-to-block" data-scroll="#scroll-to-team">Read More</a></button>
+                                
+
+                                <a href="#!" class="button scroll-to-block" data-scroll="#scroll-to-team">
+                                  Read More</a>
 
                             
                                 
@@ -131,8 +134,11 @@
                             <div class="carousel-content">
                                 <h2 class="name">Super offers</h2>
                           
-                                <button class="button"><a href="#!" class="scroll-to-block" data-scroll="#offers">
-                                    Read More</a></button>
+                                <!-- <button class="scroll-to-block button" data-scroll="#scroll-to-team"  onclick="window.location.href='#!'">Read More</button> -->
+
+
+                                <a href="#!" class="button scroll-to-block" data-scroll="#offers">
+                                    Read More</a>
                             </div>
                         </div>
                         <!-- / Slide Item -->
@@ -153,8 +159,8 @@
                             <div class="carousel-content">
                                 <h2 class="name">Super result</h2>
                           
-                                <button class="button"><a href="#!" class="scroll-to-block" data-scroll="#results">
-                                    Read More</a></button>
+                                <a href="#!" class="button scroll-to-block" data-scroll="#results">
+                                  Read More</a>
                             </div>
                         </div>
                         <!-- / Slide Item -->
@@ -708,7 +714,7 @@
         <div class="container">
             <div class="map" id="map">
                 <h2 class="map__title">
-                    <div><i class="fas fa-map-marker-alt"></i></div>
+                    <i class="fas fa-map-marker-alt"></i>
                     <a href="https://goo.gl/maps/F8YpeCGqwrG2" target="_blank">Open Map</a>
                 </h2>
             </div>
@@ -740,9 +746,9 @@
     </h3>
 
     <div class="form__item">
-        <div class="form__label"><label for="degree">Degree (click on the list)</label></div>
+        <div class="form__label">Degree (click on the list)</div>
         <select name="degree" class="select">
-            <option disabled selected value></option>
+            <option disabled selected value label="choose"></option>
             <option value="primaryschool">Primary school</option>
             <option value="highschool">High school</option>
             <option value="university">University</option>
@@ -750,7 +756,7 @@
     </div>
                           <label for="plus">How many employees do you find?</label>
                           <select name="plus" id="plus">
-                              <option disabled selected value></option>
+                              <option disabled selected value label="choose"></option>
                               <option value="1">1</option>
                               <option value="2">2 and more</option>
                           </select>
@@ -772,7 +778,7 @@
 
             </div>
 
-        </div>
+        
     </section>
 
 <!-- Form Options -->
@@ -908,7 +914,7 @@
 <!-- Modal / -->
 
 <!-- Modal Message-->
-<div id="form-modal" data-modal class="fade-block hidden">
+<div id="form-modal2" data-modal class="fade-block hidden">
   <div class="modal-window">
       <div class="modal-card">
           <div class="modal-card__header">

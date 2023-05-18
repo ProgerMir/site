@@ -304,6 +304,7 @@ hr {
 
 .scroll-to-block{
     position: relative;
+    color: #fff
 }
 
 .scroll-to-block svg,
@@ -625,9 +626,12 @@ hr {
     padding: 8px 16px;
     background-color: #0f2f3f;
     border-radius: 6px;
-    margin: 14px;
+    margin-top: 5px;
+    margin-bottom: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+
+    text-decoration: none;
   }
 
   .button a {
