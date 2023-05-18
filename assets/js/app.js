@@ -75,13 +75,17 @@ $(function() {
 
 
 
-// Form email
+// Form, email
 
-// const secondForm = document.querySelector('#secondForm')
-// secondForm.addEventListener('submit', function(e) {
-//   e.preventDefault()
-// })
+const secondForm = document.querySelector('#subscribeForm')
+secondForm.addEventListener('submit', function(e) {
+  e.preventDefault()
+})
 
+const messageForm = document.querySelector('#messageForm')
+messageForm.addEventListener('click', function(e){
+  e.preventDefault()
+})
 
 // A href socials
 
@@ -184,6 +188,7 @@ modalButtons.forEach(function(item){
 
 modalCloseButtons.forEach(function(item){
   item.addEventListener('click', function(){
+    // e.preventDefault()
     const modal = this.closest('[data-modal]')
     modal.classList.add('hidden')
   })
